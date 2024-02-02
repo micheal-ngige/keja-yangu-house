@@ -32,7 +32,7 @@ function Register() {
     }
 
     try {
-      //  API call logic here
+     
       const response = await fetch('http://127.0.0.1:5000/user', {
         method: 'POST',
         headers: {
@@ -48,7 +48,7 @@ function Register() {
       alert('User registered successfully');
       
       navigate('/Login');
-      console.log('done');
+      // console.log('done');
     } catch (error) {
       console.error('This is the error:', error);
     }

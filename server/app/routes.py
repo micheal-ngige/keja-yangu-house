@@ -34,15 +34,15 @@ def add_user_route():
 @cross_origin()  # Allow CORS for the /login route
 def login_():
     if request.method == 'OPTIONS':
-        # Handle CORS preflight request
+        
         return jsonify({'message': 'CORS preflight request handled'}), 200
 
-    # Continue with your login logic
+  
     data = request.get_json()
     username = data.get('username', '')
     password = data.get('password', '')
 
-    # Call your login function
+   
     return login(username, password)
    
 
@@ -95,7 +95,7 @@ def delete_house_route(id):
     return delete_house(id)
 
 # Review routes
-# (Similar structure for other resource routes)
+
 
 @bp.route('/review', methods=['POST'])
 def add_review_route():
